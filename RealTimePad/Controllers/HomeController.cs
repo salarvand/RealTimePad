@@ -12,6 +12,7 @@ namespace RealTimePad.Controllers
     {
         public IActionResult Index()
         {
+            Response.Cookies.Append("sessionID", "s.fc5e5c28cad7fd57cc298af28bc6d693");
             return View();
         }
 

@@ -33,6 +33,13 @@ namespace RealTimePad
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+//            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+//            {
+//                builder.AllowAnyOrigin()
+//                    .AllowAnyMethod()
+//                    .AllowAnyHeader();
+//            }));
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
@@ -52,6 +59,8 @@ namespace RealTimePad
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+//            app.UseCors("MyPolicy");
 
             app.UseStaticFiles();
 
