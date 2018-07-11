@@ -48,11 +48,11 @@
 
 </script> }
 
-<div class="ui container center aligned">
+<div data-bind="with: pad" class="ui container center aligned">
     <div class="ui raised right aligned attached segment">
         <div class="ui form">
             <div class="field">
-                <textarea placeholder="یاداشت کنید ..." style="direction: rtl"></textarea>
+                <textarea data-bind="value:messageContent" placeholder="یاداشت کنید ..." style="direction: rtl"></textarea>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <span style="font-family: 'sans'" data-tooltip="ذخیره یادداشت" data-position="bottom center" class="ui bottom  right floated header">
+        <span data-bind="click:saveMessage" style="font-family: 'sans'" data-tooltip="ذخیره یادداشت" data-position="bottom center" class="ui bottom  right floated header">
             <i style="cursor: pointer;" class="green large check icon"></i>
         </span>
     </div>
